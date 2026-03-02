@@ -1,13 +1,14 @@
-using System.Drawing;
-
-namespace MinecraftApp.Blocks;
-
-public class Sand : Basisblock
+namespace MinecraftApp.Blocks
 {
-    public string Color(Color color)
+    public class Sand : Basisblock
     {
-        Console.WriteLine(color);
-        return color.ToArgb().ToString();
-    }
-    
+        public Sand() : base("Sand", "yellow", 10)
+        {
+        }
+
+        /*public override void Abbauen
+        {
+        Console.Writeline("Abbauen")
+        }*/
+    } 
 }

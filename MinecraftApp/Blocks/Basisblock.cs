@@ -1,21 +1,26 @@
-namespace MinecraftApp.Blocks;
-
-public class Basisblock
+namespace MinecraftApp.Blocks
 {
-    private string color;
-
-    public string Color
+    public abstract class Basisblock
     {
-        get { return this.color; }
-        set { color = value; }
-    }
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public int Speed { get; set; }
     
-    
-    private int speed;
-    
-    public int Speed
-    {
-        get { return this.speed; }
-        set { speed = value; }
-    }
+        public Basisblock(string name, string color, int speed)
+        {
+            Name = name;
+            Color = color;
+            Speed = speed;
+        }
+        
+        /*public Info()
+        {
+            Console.WriteLine("");
+        }*/
+        
+        /*public virtual void Abbauen()
+        {
+            Console.WriteLine("Abbauen");
+        }*/
+    } 
 }

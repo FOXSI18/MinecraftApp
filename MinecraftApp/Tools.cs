@@ -1,9 +1,10 @@
-namespace MinecraftApp;
-
-internal enum Tools
+namespace MinecraftApp
 {
-    Hand = 1,
-    Pickaxe,
-    Shovel,
-    Axe,
+    internal enum Tools
+    {
+        Hand = 1,
+        Pickaxe,
+        Shovel,
+        Axe,
+    } 
 }
