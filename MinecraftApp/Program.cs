@@ -7,8 +7,14 @@ class Program
     static void Main()
     {
         Console.Clear();
+        
+        SlotMachine.SlotMachine myMachine = new SlotMachine.SlotMachine();
+        
         Console.ForegroundColor = ConsoleColor.DarkGray;
         Console.WriteLine("Welcome to Mini Minecraft!");
+        Console.WriteLine("Write '5' to Slot machine");
+        Console.WriteLine("Write '9' to Exit\n");
+        
         while (true)
         {
             List<Basisblock> world = new List<Basisblock>
@@ -24,7 +30,6 @@ class Program
             Console.WriteLine("2 = Pickaxe");
             Console.WriteLine("3 = Shovel");
             Console.WriteLine("4 = Axe");
-            Console.WriteLine("5 = Exit\n");
             Console.ResetColor();
 
             Tool selectedTool;
@@ -36,6 +41,44 @@ class Program
 
                 if (selectedTool == Tool.Exit)
                     break;
+
+                if (selectedTool == Tool.SlotM)
+                {
+                    while (true)
+                    {
+                        Console.WriteLine("\n1 = Rules\n2 = Play\n3 = Break\n");
+                        int userChoice = Convert.ToInt32(Console.ReadLine());
+
+                        if (userChoice == 1)
+                        {
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.WriteLine("=====RULES=====");
+                            Console.WriteLine("Jackpot == 9 Scores");
+                            Console.WriteLine("Win >= 7 Scores");
+                            Console.WriteLine("Lose <= 6  Scores");
+                            Console.WriteLine("\n=====VALUES=====");
+                            Console.WriteLine("Dirt = 1\nApple = 2\nDiamond = 3\n");
+                            Console.ResetColor();
+                            continue;
+                        }
+                        if (userChoice == 2)
+                        {
+                            Console.Clear();
+                            myMachine.ChooseRandomNumber();
+                            continue;
+                        }
+                        if (userChoice == 3)
+                        {
+                            Console.Clear();
+                            break;
+                        }
+                        
+                        Console.Clear();
+                    }
+                    continue;
+                }
+                    
 
                 if (selectedTool != Tool.Hand &&
                     selectedTool != Tool.Pickaxe &&

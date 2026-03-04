@@ -73,6 +73,3 @@ public abstract class Basisblock
         Console.ResetColor();
     }
 }
-
-    
-

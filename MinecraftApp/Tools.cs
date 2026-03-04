@@ -5,10 +5,12 @@ namespace MinecraftApp
     /// </summary>
     public enum Tool
     {
-        Hand = 1,
+        Null,
+        Hand,
         Pickaxe,
         Shovel,
         Axe,
-        Exit,
+        SlotM,
+        Exit = 9,
     } 
 }
