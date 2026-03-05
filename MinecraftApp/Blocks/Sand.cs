@@ -10,7 +10,7 @@ public class Sand : Basisblock
     /// <summary>
     /// Calling the base class constructor for Sand
     /// </summary>
-    public Sand() : base("Sand", "yellow", 3)
+    public Sand() : base("Sand", "yellow", 2)
     {
         FallsDown = true;
     }
@@ -23,7 +23,7 @@ public class Sand : Basisblock
     public override int CalculateBreakTime(Tool tool)
     {
         if (tool == Tool.Shovel)
-            return BreakTime - 2;
+            return BreakTime - 1;
 
         return BreakTime;
     }

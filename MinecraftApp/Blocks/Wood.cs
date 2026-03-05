@@ -10,7 +10,7 @@ public class Wood : Basisblock
      /// <summary>
      /// Calling the base class constructor for Wood
      /// </summary>
-        public Wood() : base("Wood", "brown", 5)
+        public Wood() : base("Wood", "brown", 4)
     {
         IsFlammable = true;
     }
@@ -23,7 +23,7 @@ public class Wood : Basisblock
      public override int CalculateBreakTime(Tool tool)
     {
         if (tool == Tool.Axe)
-            return BreakTime - 4;
+            return BreakTime - 3;
 
         return BreakTime;
     }

@@ -10,7 +10,7 @@ public abstract class Basisblock
     public int BreakTime { get; set; }
 
     /// <summary>
-    /// Constructor of Basisblock
+    /// Constructor for Basisblock
     /// </summary>
     /// <param name="name">Name of block</param>
     /// <param name="color">Color of block</param>

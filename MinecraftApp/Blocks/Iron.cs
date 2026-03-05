@@ -10,7 +10,7 @@ public class Iron : Basisblock
     /// <summary>
     /// Calling the base class constructor for Iron
     /// </summary>
-    public Iron() : base("Iron", "gray", 8)
+    public Iron() : base("Iron", "gray", 6)
     {
         IsHard = true;
     }
@@ -23,7 +23,7 @@ public class Iron : Basisblock
      public override int CalculateBreakTime(Tool tool)
     {
         if (tool == Tool.Pickaxe)
-            return BreakTime - 6;
+            return BreakTime - 4;
 
         return BreakTime;
     }
